@@ -38,7 +38,7 @@ class MyFilter implements Filter{
         String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 
         if(url.endsWith("login") || url.endsWith("getRole") ||url.endsWith("getPost") ||url.endsWith("getUserInfo") ||url.endsWith("getDepartment")||url.endsWith("regist") ||url.endsWith("getAdministration") ||
-           url.contains("htmls") ||url.endsWith("getLastUpdateDLTBService") ||url.endsWith("getLastUpdateXZQService") ||url.endsWith("getAllRunImageLayerService")  ){
+           url.contains("dm") ||url.endsWith("getLastUpdateDLTBService") ||url.endsWith("getLastUpdateXZQService") ||url.endsWith("getAllRunImageLayerService")  ){
             filterChain.doFilter(servletRequest,servletResponse);//放行
             return;
         }
